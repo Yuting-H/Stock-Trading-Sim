@@ -1,1 +1,1 @@
-# Stock-Trading-Game
+# Stock-Trading-Sim
