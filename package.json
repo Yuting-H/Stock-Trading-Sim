@@ -1,0 +1,28 @@
+{
+  "name": "stock-trading-sim",
+  "version": "1.0.0",
+  "description": "This project aims to create a Stock Trading Simulator with real player transactions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yuting-H/Stock-Trading-Sim.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Yuting-H/Stock-Trading-Sim/issues"
+  },
+  "homepage": "https://github.com/Yuting-H/Stock-Trading-Sim#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
