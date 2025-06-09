@@ -4,7 +4,7 @@ This project aims to create a Stock Trading Simulator with real player transacti
 
 ## Running the server
 
-1. Naviagate to project root directory
+1. Navigate to project root directory
 
 2. Run `npm install` to install dependencies
 
