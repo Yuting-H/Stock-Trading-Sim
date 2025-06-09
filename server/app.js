@@ -14,12 +14,12 @@ const port = 3000;
 
 const appRoot = path.join(__dirname, "..");
 
-app.get("/", (req, res) => {
+app.get("/", (res) => {
   res.sendFile(path.join(appRoot, "client", "index.html"));
 });
 
 // When user naviagates to localhost:3000/api/hello, send them this message
-app.get("/api/hello", (req, res) => {
+app.get("/api/hello", (res) => {
   res.send("Your server is running, notice the");
 });
 
