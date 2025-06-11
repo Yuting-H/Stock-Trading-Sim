@@ -3,13 +3,16 @@ const chart = document.getElementById("stock-chart");
 const canvasContext = chart.getContext("2d");
 
 // Represents the stock's price
-const bars = [0, 0, 0, 0, 0];
+const bars = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-// each bar is 25 px wide
+// Each bar is 25 px wide
 const barWidth = 25;
 
-// Update the chart every 1000ms
-const updateInterval = 1000;
+// Each column is 150 px tall
+const chartHeight = 200;
+
+// Update the chart every 750ms
+const updateInterval = 750;
 
 setInterval(updateChart, updateInterval);
 
@@ -21,7 +24,13 @@ async function updateChart() {
 
   //draw to chart
   let xOffset = 0;
-  bars.forEach((bar) => {
+  bars.forEach((bar, index) => {
+    // Visual Stock changes via colour
+    const previous = bars[index + 1] || bar;
+    let colour  = "gray";
+    if (bar > previous) colour = "green";
+    else if (bar < previous) colour = "red";
+    canvasContext.fillStyle = colour;
     canvasContext.clearRect(xOffset, 0, barWidth, 150);
     canvasContext.fillRect(xOffset, 150 - bar, barWidth, bar);
     xOffset = xOffset + barWidth;
