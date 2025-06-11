@@ -14,13 +14,25 @@ const port = 3000;
 
 const appRoot = path.join(__dirname, "..");
 
-app.get("/", (res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(appRoot, "client", "index.html"));
 });
 
-// When user naviagates to localhost:3000/api/hello, send them this message
-app.get("/api/hello", (res) => {
-  res.send("Your server is running, notice the");
+app.get("/scripts/bar-chart.js", (req, res) => {
+  res.sendFile(path.join(appRoot, "client", "scripts/bar-chart.js"));
+});
+
+// for demo only
+// :ticker is a wildcard
+app.get("/api/demo/stocks/:ticker/latest", (req, res) => {
+  let maxPrice = 100;
+  let randPrice = Math.random() * maxPrice;
+
+  const result = {
+    price: randPrice,
+  };
+
+  res.status(200).json(result);
 });
 
 // Start the Express server and listen for incoming requests on the specified port.
