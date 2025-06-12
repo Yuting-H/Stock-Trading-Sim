@@ -1,3 +1,4 @@
 # This tells git to not update external Javascript modules/dependencies
 # Use npm to manage them instead
 **/node_modules
+.env

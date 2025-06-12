@@ -1,5 +1,9 @@
 // This script is the entry point of the server
 
+// Secret manager
+const dotenv = require("dotenv");
+dotenv.config();
+
 // Import ExpressJS from /node_modules
 const express = require("express");
 
@@ -10,7 +14,7 @@ const path = require("path");
 const app = express();
 
 // Define port for network traffic
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const appRoot = path.join(__dirname, "..");
 
@@ -20,7 +24,7 @@ app.get("/", (res) => {
 
 // When user naviagates to localhost:3000/api/hello, send them this message
 app.get("/api/hello", (res) => {
-  res.send("Your server is running, notice the");
+  res.send("Your server is running");
 });
 
 // Start the Express server and listen for incoming requests on the specified port.
