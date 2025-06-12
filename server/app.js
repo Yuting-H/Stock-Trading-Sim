@@ -22,6 +22,10 @@ app.get("/scripts/bar-chart.js", (req, res) => {
   res.sendFile(path.join(appRoot, "client", "scripts/bar-chart.js"));
 });
 
+app.get("/scripts/wallet.js", (req, res) => {
+  res.sendFile(path.join(appRoot, "client", "scripts/wallet.js"));
+});
+
 // for demo only
 // :ticker is a wildcard
 app.get("/api/demo/stocks/:ticker/latest", (req, res) => {

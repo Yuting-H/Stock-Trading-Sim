@@ -30,7 +30,7 @@ async function updateChart() {
   bars.forEach((bar, index) => {
     // Visual Stock changes via colour
     const previous = bars[index + 1] || bar;
-    let colour  = "gray";
+    let colour = "gray";
     if (bar > previous) colour = "green";
     else if (bar < previous) colour = "red";
 

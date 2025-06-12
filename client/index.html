@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stock Trading Sim</title>
-  </head>
-  <body>
-    <h1>Welcome to Stock Trading Sim</h1>
-    <p>This branch (feature-demo/bar-chart) showcase chart rendering</p>
-    <p>
-      The frontend makes a call to the server every second and get the latest
-      stock price
-    </p>
-    <p>(For now, the server generates a random number)</p>
-    <p>The frontend then draws the bar representing the stock price</p>
-    <canvas id="stock-chart"></canvas>
-    <script src="./scripts/bar-chart.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stock Trading Sim</title>
+</head>
+
+<body>
+  <h1>Welcome to Stock Trading Sim</h1>
+  <p>This branch (feature-demo/bar-chart) showcase chart rendering</p>
+  <p>
+    The frontend makes a call to the server every second and get the latest
+    stock price
+  </p>
+  <p>(For now, the server generates a random number)</p>
+  <p>The frontend then draws the bar representing the stock price</p>
+  <canvas id="stock-chart"></canvas>
+  <script src="./scripts/bar-chart.js"></script>
+  <h3>Wallet</h3>
+  <p>Balance: $<span id="wallet-balance"></span></p>
+  <script src="./scripts/wallet.js"></script>
+</body>
+
 </html>
