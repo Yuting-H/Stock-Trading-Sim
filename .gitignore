@@ -2,3 +2,4 @@
 # Use npm to manage them instead
 **/node_modules
 .env
+*.json
