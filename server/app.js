@@ -1,39 +1,29 @@
 // This script is the entry point of the server
 
-// Secret manager
+// Import and setup enviroment varaible manager
 import "dotenv/config";
 
-// Import ExpressJS from /node_modules
+// Import ExpressJS
 import express from "express";
 
-// Import path package from NodeJS
-import { dirname } from "path";
+import { dirname, join } from "path";
+import { fileURLToPath } from "url";
 
-// Firestore
+// Import Firestore
 import { db } from "./config/firebaseConfig.js";
 
-// Create server instance
 const app = express();
-
-// Define port for network traffic
 const port = process.env.PORT || 3000;
 
-app.get("/", (req, res) => {
-  res.sendFile("../client/index.html");
-});
+const publicPath = join(dirname(fileURLToPath(import.meta.url)), "public");
+
+// Add functionality to app
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(publicPath));
 
 // When user naviagates to localhost:3000/api/hello, send them this message
-app.get("/api/data", async (req, res) => {
-  try {
-    const docRef = await db.collection("products").doc("exr0UlXAPbbZImJdCR0k");
-    const docSnap = await docRef.get();
-
-    res.status(201).json(docSnap.data()); // Return the ID of the new document
-  } catch (error) {
-    console.error("Error adding product:", error);
-    res.status(500).send(error.toString());
-  }
-});
+app.get("/api/data", async (req, res) => {});
 
 // Start the Express server and listen for incoming requests on the specified port.
 app.listen(port, () => {
