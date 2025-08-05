@@ -1,0 +1,22 @@
+openapi: "3.0.3"
+info:
+  title: Stock Trading Sim
+  description: "API for my fullstack stock trading simulator"
+  version: "1.0"
+servers:
+  - url: https://api.server.test/api/v1
+
+components:
+  schemas:
+    user:
+      type: object
+      properties:
+        id:
+          type: integer
+paths:
+  /users:
+    get:
+      summary: "Get a list of users"
+      responses:
+        "200":
+          description: A list of users
