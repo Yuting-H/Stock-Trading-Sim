@@ -2,7 +2,7 @@
 import { initializeApp, cert } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
 
-import serviceAccount from "../../stock-trading-sim-3000-firebase-adminsdk-fbsvc-ae82901ad7.json" with { type: 'json' };
+import serviceAccount from "../../firebase-credential.json" with { type: 'json' };
 
 try {
   initializeApp({credential:cert(serviceAccount)})
