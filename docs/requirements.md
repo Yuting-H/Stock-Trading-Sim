@@ -12,10 +12,9 @@
 
 ### Trading
 
-- User can get a set amount of cash evert day by performing some simple action
+- User can get a set amount of cash every day by performing some simple action
 - User can select and view differnt stocks
 - User can create buy and sell orders
-- User can fulfill buy and sell orders made by other users
 - Stock information displaying graph chart and current buy and sell orders
 
 ## Non-Functional Requirements
