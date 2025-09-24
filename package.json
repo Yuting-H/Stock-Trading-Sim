@@ -29,5 +29,8 @@
   "homepage": "https://github.com/Yuting-H/Stock-Trading-Sim#readme",
   "devDependencies": {
     "concurrently": "^9.2.0"
+  },
+  "dependencies": {
+    "react-router-dom": "^7.9.1"
   }
 }
