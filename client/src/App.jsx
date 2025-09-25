@@ -1,16 +1,15 @@
 import "./App.css";
 import HomePage from "./pages/HomePage";
 import { Link, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div>
-      <nav>
-        <Link to="/home">Home Page</Link>
-      </nav>
       <main>
+        <Navbar />
         <Routes>
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
         </Routes>
       </main>
     </div>
