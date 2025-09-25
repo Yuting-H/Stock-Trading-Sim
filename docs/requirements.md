@@ -22,7 +22,7 @@
 ### Libraries
 
 - Use Firebase, Express, React and Node to accomplish main features
-- Use other libraries such as tailwind to reduce implementing features manually
+- Use Tailwind for styling
 
 ### Directory Structure
 

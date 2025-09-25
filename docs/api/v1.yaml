@@ -3,31 +3,61 @@ info:
   title: Stock Trading Sim
   description: "API for my fullstack stock trading simulator"
   version: "1.0"
+
 servers:
   - url: https://api.server.test/api/v1
     description: "Serving Data"
+tags:
+  - name: "Users"
+  - name: "Stocks"
+  - name: "Orders"
 
 paths:
   /users:
     get:
       tags:
-        - User
+        - Users
       responses:
         "200":
-          description: "A list of users"
+          description: "Get A list of users"
   /users/new:
     post:
       tags:
-        - User
-      description: ""
+        - Users
+      description: "Creates a new user"
+      responses:
+        "201":
+          description: "Returns the new user's id"
+        "500":
+          description: "Error"
+  /users/{id}:
+    get:
+      tags:
+        - Users
       responses:
         "200":
-          description: "Returns the new user's id"
+          description: "Ok"
+        "404":
+          description: "Does not exist"
+    put:
+      tags:
+        - Users
+      responses:
+        "200":
+          description: "OK"
 
 components:
   schemas:
-    user:
+    User:
       type: object
+      description: "Represents a user in the system"
       properties:
         id:
           type: integer
+          description: "Unique identifier"
+        username:
+          type: string
+          description: "Display name"
+        cash:
+          type: number
+          description: "The amount of cash the user has, significant to last 2 digits"
