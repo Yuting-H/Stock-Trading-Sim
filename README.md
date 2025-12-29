@@ -22,18 +22,12 @@ Real orders (of simulated stocks) placed by players
 
 ### Frontend
 
-HTML
-
-CSS + Bootstrap
-
-JavaScript
+- React
+- Tailwind
 
 ### Backend
 
-npm
-
-NodeJS
-
-ExpressJS
-
-JavaScript
+- npm
+- Node
+- Express
+- Postgresql using Supabase
