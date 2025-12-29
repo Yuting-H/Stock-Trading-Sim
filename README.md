@@ -30,4 +30,5 @@ Real orders (of simulated stocks) placed by players
 - npm
 - Node
 - Express
-- Postgresql using Supabase
+- Oracle VM
+- Postgresql using Oracle Block 
